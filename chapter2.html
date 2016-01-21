@@ -1,0 +1,62 @@
+<script>
+// Looping a triangle //
+function loopingATriangle() {
+  var output = '#';
+  for (i = 0; i < 8; i++) {
+    console.log(output);
+    output += "#";
+  }
+}
+
+function loopingATriangle2() {
+  var output = '#';
+  while (output.length < 8) {
+    console.log(output);
+    output += "#";
+  }
+}
+
+loopingATriangle2()
+
+// Fizbuzz
+/*
+Print numbers from 1 to 100
+Divisible by 3, print "Fizz"
+Divisible by 5 (but not 3) print "Buzz"
+If divisible by both, print "FizzBuzz"
+*/
+function fizzBuzz() {
+  for (i = 1; i <= 100; i++) {
+    var output = '';
+    if (i%3 == 0) output = 'Fizz';
+    if (i%5 == 0) output += 'Buzz';
+    console.log(i, output);
+  }
+}
+
+fizzBuzz();
+
+function chessBoard(size) {
+  var board = '';
+  var boardChar = ' ';
+  var across = size, down = size;
+  while (down > 0) {
+    while(across > 0) {
+      board += boardChar;
+      boardChar = boardChar == ' ' ? '#' : ' ';
+      across--;
+    }
+    boardChar = boardChar == ' ' ? '#' : ' ';
+	  across = size;
+    board += '\n';
+    down--;
+  }
+  return board;
+}
+
+console.log(chessBoard(8));
+
+</script>
+
+See console...
+
