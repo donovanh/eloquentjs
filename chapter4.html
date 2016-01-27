@@ -127,7 +127,7 @@ function listToArray(list) {
   // Start an aray with the first value in the list
   var array = [list.value];
   while(list.rest !== null) {
-    // Pop the first item off the list and repeat
+    // Push the next item into list until no more rests
     list = list.rest;
     array.push(list.value);
   }
