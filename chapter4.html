@@ -174,12 +174,22 @@ Note: Using typeof and === should work, but beware the issue where typeof identi
 */
 console.log('\nExercise 4: Deep comparison');
 
+function deepEqual(object1, object2) {
+  for (var property in object1) {
+    if (typeof object1[property] === 'object') {
+      return deepEqual(object1[property], object2[property]);
+    } else {
+      return object1[property] === object2[property];
+    }
+  }
+}
+
 var obj = {here: {is: "an"}, object: 2};
-//console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, obj));
 // → true
-//console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, {here: 1, object: 2}));
 // → false
-//console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // → true
 
 </script>

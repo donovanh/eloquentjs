@@ -1,0 +1,67 @@
+
+<script>
+// Exercise answers from chapter 5 of Eloquent JavaScript
+// http://eloquentjavascript.net/code/
+
+console.log('\nExercise 1: Flattening');
+
+var arrays = [[1, 2, 3], [4, 5], [6]];
+// Your code here.
+// → [1, 2, 3, 4, 5, 6]
+
+function test(foo) {
+  foo++;
+  return foo;
+}
+
+
+console.log('\nExercise 2: Mother/child age difference');
+
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+// var byName = {};
+// ancestry.forEach(function(person) {
+//   byName[person.name] = person;
+// });
+
+// Your code here.
+
+// → 31.2
+
+
+console.log('\nExercise 3: Historical life expectancy');
+
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+// Your code here.
+
+// → 16: 43.5
+//   17: 51.2
+//   18: 52.8
+//   19: 54.8
+//   20: 84.7
+//   21: 94
+
+
+console.log('\nExercise 4: Every and then some');
+
+// Your code here.
+
+// console.log(every([NaN, NaN, NaN], isNaN));
+// // → true
+// console.log(every([NaN, NaN, 4], isNaN));
+// // → false
+// console.log(some([NaN, 3, 4], isNaN));
+// // → true
+// console.log(some([2, 3, 4], isNaN));
+// // → false
+
+</script>
+
+See console...
